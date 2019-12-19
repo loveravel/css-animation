@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>CSS-анимации</title>
+</head>
+
+<body>
+  <section class="slider wrapper">
+    <div class="slider__container">
+      <h1 class="slider__theme title">Динамические эффекты в CSS</h1>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">План</h2>
+      <ul class="slider__list">
+        <li class="slider__item">Понятие анимации</li>
+        <li class="slider__item">Где куют анимацию</li>
+        <li class="slider__item">2D Трансформации</li>
+        <li class="slider__item">Timing Function</li>
+        <li class="slider__item">Плавные переходы</li>
+        <li class="slider__item">Покадровое управление анимцией</li>
+        <li class="slider__item">Что можно анимировать</li>
+        <li class="slider__item">+/-</li>
+      </ul>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="visually-hidden">Что такое анимация?</h2>
+      <dl class="slider__d-list d-list">
+        <dt class="d-list__title">Анимация <em>(от фр. animation «оживление; одушевление»)</em></dt>
+        <dd class="d-list__description">технология мультимедиа; воспроизведение последовательности картинок, создающее впечатление движущегося изображения</dd>
+      </dl>      
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">Анимацию куют</h2>
+      <ul class="slider__list">
+        <li class="slider__item">Adobe After Effect</li>
+        <li class="slider__item">Adobe Animate</li>
+        <li class="slider__item">Adobe Premier</li>
+        <li class="slider__item">...</li>
+        <li class="slider__item">Много различного софта</li>
+        <li class="slider__item">для работы с видио- и фотографикой (Adobe Photoshop тоже может)</li>
+        <li class="slider__item">...</li>
+        <li class="slider__item">(и не только от Adobe)</li>
+        <li class="slider__item">...</li>
+      </ul>
+      <p class="slider__text text">Однако и CSS позволяет создавать простые анимации <b>без использования JavaScript</b>.</p>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">Трансформации</h2>
+      <p class="slider__text text">CSS-свойство <b>transform</b> позволяет поворачивать, маштабировать, наклонять или сдвигать элемент.</p>
+      <ul class="slider__list">
+        <li class="slider__item">matrix (матрица)</li>
+        <li class="slider__item">translate (перенос)</li>
+        <li class="slider__item">scale (масштаб)</li>
+        <li class="slider__item">rotate (поворот)</li>
+        <li class="slider__item">skew (наклон)</li>
+      </ul>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title"><a href="https://developer.mozilla.org/ru/docs/Web/CSS/timing-function">Timing Function</a></h2>
+      <p class="slider__text text">
+        Обозначает математическую функцию, которая описывает,
+        как быстро изменяются одномерные значения во время анимации.
+      </p>
+      <p class="slider__text text">Позволяет изменять скорость анимации в течение ее продолжительности.</p>
+      <ul class="slider__list">
+        <li class="slider__item">linear (движется от начала к концу с постоянной скоростью)</li>
+        <li class="slider__item">ease (начинается медленно, резко ускоряется, а затем постепенно замедляется к концу)</li>
+        <li class="slider__item">ease-in (начинается медленно, а затем постепенно ускоряется до конца, после чего она резко останавливается)</li>
+        <li class="slider__item">ease-in-out (начинается медленно, ускоряется, а затем замедляется к концу)</li>
+        <li class="slider__item">ease-out (начинается внезапно, а затем постепенно замедляется к концу)</li>
+        <li class="slider__item">cubic-bezier(x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>)</li>
+        <li class="slider__item">steps(n, &lt;direction&gt;)</li>
+      </ul>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">Плавные переходы</h2>
+      <p class="slider__text text">
+        Свойство CSS <b>transition</b> — сокращенное свойство для
+        transition-property, transition-duration, transition-timing-function, и transition-delay.
+      </p>
+      <p class="slider__text text">
+        Позволяет определять переходное состояние между двумя состояниями элемента.
+      </p>
+      <p class="slider__text text">
+        Различные состояния могут быть определены с помощью псевдоклассов,
+        таких как :hover и :active или установлены динамически с помощью JavaScript.
+      </p>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">Покадровое управление анимцией</h2>
+      <p class="slider__text text">Для этого понадобятся:</p>
+      <ul class="slider__list">
+        <li class="slider__item">Раскадровка (@keyframes)</li>
+        <li class="slider__item">CSS-свойтво animation</li>
+      </ul>
+    </div>
+
+    <div class="slider__container">
+      <h3 class="slider__title">@keyframes</h3>
+      <p class="slider__text text">
+        Позволяет управлять промежуточными шагами путем определения стилей
+        для ключевых кадров (или точек) вдоль последовательности анимации.
+      </p>
+      <ul class="slider__list">
+        <li class="slider__item">from</li>
+        <li class="slider__item">nn%</li>
+        <li class="slider__item">to</li>
+      </ul>
+    </div>
+
+    <div class="slider__container">
+      <h3 class="slider__title">animation</h3>
+      <ul class="slider__list">
+        <li class="slider__item">animation-name (имя раскадровки)</li>
+        <li class="slider__item">animation-duration (длительность)</li>
+        <li class="slider__item">animation-timing-function</li>
+        <li class="slider__item">animation-delay (задержка перед воспроизведением)</li>
+        <li class="slider__item">animation-iteration-count (кол-во итераций): infinite | &lt;number&gt;</li>
+        <li class="slider__item">animation-direction (направление вопроизведения раскадровки): normal | reverse | alternate | alternate-reverse</li>
+        <li class="slider__item">animation-fill-mode (применение стилей к объекту до и после выполнения анимации): none | forwards | backwards | both</li>
+        <li class="slider__item">animation-play-state (состояние воспроизведения): running | paused</li>
+      </ul>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">Что можно анимировать</h2>
+      <p class="slider__text text">
+        Так как некоторые свойства не имеет смысла анимировать, перечень
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">доступных для анимирования свойств</a>
+        ограничен определенным набором.
+      </p>
+    </div>
+
+    <div class="slider__container">
+      <h2 class="slider__title">+/-</h2>
+      <ul class="slider__list">
+        <li class="slider__item slider__item--plus">Простые анимации делаются просто</li>
+        <li class="slider__item slider__item--plus">Быстрые и не создают нагрузку на CPU</li>
+        <li class="slider__item slider__item--minus">JavaScript-анимации более гибкие. В них может присутствовать любая анимационная логика</li>
+        <li class="slider__item slider__item--minus">Можно изменять не только свойства, а также создавать новые элементы с помощью JavaScript для анимации</li>
+      </ul>
+    </div>
+
+    <!-- Энд -->
+    <div class="slider__container">
+      <h2 class="slider__theme title">The End.</h2>
+    </div>
+
+    <div class="slider__controls controls">
+      <button class="controls__item controls__item--prev">Prev</button>
+      <button class="controls__item controls__item--next">Next</button>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
